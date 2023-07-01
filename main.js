@@ -251,7 +251,7 @@ finalizarCompra.addEventListener("click", () => {
   const compraId = IdUnico();
 
   if (userInfo == null) {
-    window.open("http://192.168.1.39:5500/html/register.html", "_self");
+    window.open('./register.html', "_self");
   } else {
     Toastify({
       classname: "alert",
