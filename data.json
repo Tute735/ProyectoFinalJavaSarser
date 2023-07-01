@@ -1,0 +1,165 @@
+[
+    {
+      "id": "1",
+      "nombre": "Zapatillas Nike Dunk Hi Retro",
+      "imagen": "../img/producto1.jpg",
+      "precio": 58799,
+      "categoria": {
+        "marca": "Nike",
+        "id": "nike"
+      }
+    },
+    {
+      "id": "2",
+      "nombre": "Zapatillas Nike Air Force 1 High 07",
+      "imagen": "../img/producto2.jpg",
+      "precio": 64799,
+      "categoria": {
+        "marca": "Nike",
+        "id": "nike"
+      }
+    },
+    {
+      "id": "3",
+      "nombre": "Zapatillas adidas Forum Mid",
+      "cantidad": 1,
+      "imagen": "../img/producto3.jpg",
+      "precio": 37999,
+      "categoria": {
+        "marca": "Adidas",
+        "id": "adidas"
+      }
+    },
+    {
+      "id": "4",
+      "nombre": "Zapatillas Jordan 1 Low SE Mujer",
+      "imagen": "../img/producto4.jpg",
+      "precio": 57999,
+      "categoria": {
+        "marca": "Nike",
+        "id": "nike"
+      }
+    },
+    {
+      "id": "5",
+      "nombre": "Zapatillas Nike Air Vapormax 2021 Fk",
+      "imagen": "../img/producto5.jpg",
+      "precio": 96999,
+      "categoria": {
+        "marca": "Nike",
+        "id": "nike"
+      }
+    },
+    {
+      "id": "6",
+      "nombre": "Zapatillas adidas Forum Mid Thebe ",
+      "imagen": "../img/producto6.jpg",
+      "precio": 57999,
+      "categoria": {
+        "marca": "Adidas",
+        "id": "adidas"
+      }
+    },
+    {
+      "id": "7",
+      "nombre": "Zapatillas adidas Superstar Ot Tech",
+      "imagen": "../img/producto7.jpg",
+      "precio": 57999,
+      "categoria": {
+        "marca": "Adidas",
+        "id": "nike"
+      }
+    },
+    {
+      "id": "8",
+      "nombre": "Zapatillas Adidas Forum Mid",
+      "imagen": "../img/producto8.png",
+      "precio": 55999,
+      "categoria": {
+        "marca": "Adidas",
+        "id": "nike"
+      }
+    },
+    {
+      "id": "9",
+      "nombre": "Zapatillas Nike LeBron 19",
+      "imagen": "../img/producto9.jpg",
+      "precio": 79999,
+      "categoria": {
+        "marca": "Nike",
+        "id": "nike"
+      }
+    },
+    {
+      "id": "10",
+      "nombre": "Zapatillas Adidas Forum Mid",
+      "imagen": "../img/producto10.jpg",
+      "precio": 55999,
+      "categoria": {
+        "marca": "Adidas",
+        "id": "nike"
+      }
+    },
+    {
+      "id": "11",
+      "nombre": "Zapatillas Adidas Forum Mid",
+      "imagen": "../img/producto11.jpg",
+      "precio": 55999,
+      "categoria": {
+        "marca": "Adidas",
+        "id": "nike"
+      }
+    },
+    {
+      "id": "12",
+      "nombre": "Zapatillas Adidas Forum Mid",
+      "imagen": "../img/producto12.jpg",
+      "precio": 55999,
+      "categoria": {
+        "marca": "Adidas",
+        "id": "nike"
+      }
+    },
+    {
+      "id": "13",
+      "nombre": "Zapatillas Adidas Forum Mid",
+      "imagen": "../img/producto13.jpg",
+      "precio": 55999,
+      "categoria": {
+        "marca": "Adidas",
+        "id": "nike"
+      }
+    },
+    {
+      "id": "14",
+      "nombre": "Zapatillas Adidas Forum Mid",
+      "imagen": "../img/producto14.jpg",
+      "precio": 55999,
+      "categoria": {
+        "marca": "Adidas",
+        "id": "nike"
+      }
+    },
+    {
+      "id": "15",
+      "nombre": "Zapatillas Adidas Forum Mid",
+      "imagen": "../img/producto15.jpg",
+      "precio": 55999,
+      "categoria": {
+        "marca": "Adidas",
+        "id": "nike"
+      }
+    },
+    {
+      "id": "16",
+      "nombre": "Zapatillas Adidas Forum Mid",
+      "imagen": "../img/producto16.jpg",
+      "precio": 55999,
+      "categoria": {
+        "marca": "Adidas",
+        "id": "nike"
+      }
+    }
+
+  ]
+  
