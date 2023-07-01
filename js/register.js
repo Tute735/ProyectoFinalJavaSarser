@@ -15,10 +15,9 @@ inputsRegister.appendChild(div)
 
 const registrationForm = document.getElementById('registrationForm')
 const messageDiv = document.getElementById('message')
-const registradoAlert = document.querySelector(".Registrado")
+
 registrationForm.addEventListener('submit', function(event) {
   event.preventDefault()
-   })
 
   const username = document.querySelector('.Usuario').value
   const email = document.querySelector('.Email').value
@@ -39,8 +38,8 @@ registrationForm.addEventListener('submit', function(event) {
   registrationForm.reset()
 
 
+})
 
 
 
-  
 
