@@ -247,12 +247,14 @@ const verCarrito = () => {
 }
 
 finalizarCompra.addEventListener("click", () => {
-  const userInfo = localStorage.getItem("userInfo")
+  const userInfo = localStorage.getItem("userInfo");
+  const compraId = IdUnico();
+
   if (userInfo == null) {
-    window.open('./register.html', "_self")
+    window.open("http://192.168.1.39:5500/html/register.html", "_self");
   } else {
     Toastify({
-      classname:"alert",
+      classname: "alert",
       text: "Compra Realizada",
       duration: 1000,
       newWindow: true,
@@ -265,10 +267,17 @@ finalizarCompra.addEventListener("click", () => {
       },
       onClick: function(){} // Callback after click
     }).showToast();
-    localStorage.setItem("Compra", JSON.stringify({ articulos: [...carrito], total: precioTotal }))
-    carrito = []
-    verCarrito()
- 
-  }
+    const compra = { articulos: [...carrito], total: precioTotal };
 
-  })
+   
+    localStorage.setItem(`Compra-${compraId}`, JSON.stringify(compra));
+
+    carrito = [];
+    verCarrito();
+  }
+});
+
+
+function IdUnico() {
+  return Math.random().toString(36);
+}

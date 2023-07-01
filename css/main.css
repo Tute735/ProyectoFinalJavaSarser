@@ -148,19 +148,23 @@ margin-left: 150px;
 }
 .Usuario{
   height: 50px;
+  width: 600px;
 }
 .Email{
   height: 50px;
+  width: 600px;
 }
 .Date{
   height: 50px;
+  width: 600px;
 }
 .Contraseña{
   height: 50px;
+  width: 600px;
 }
 .Registrado{
   height: 50px;
-  
+  width: 600px;
 }
 .btnRegister{
   text-decoration: none;
@@ -273,4 +277,18 @@ margin: 5px;
   margin: 50px;
   
   }
-  
+  .inputsRegisterForm{
+    display: flex;
+    justify-content: center;
+  }
+.inputsRegisterForm input{ 
+  display: block;
+  justify-content: center;
+  margin: 40px;
+
+
+}
+.blockInput{
+  display: block;
+
+}

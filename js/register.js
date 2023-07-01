@@ -2,20 +2,22 @@ const inputsRegister = document.getElementById('inputsRegister');
 const div = document.createElement('div');
 div.classList.add('formConfig');
 div.innerHTML = `
-  <form id="registrationForm">
+  <form class="inputsRegisterForm" id="registrationForm">
+  <div class= "blockInput">
     <input type="text" placeholder="Nombre de Usuario" class="Usuario" required>
     <input type="email" placeholder="Email" class="Email" required>
     <input type="date" class="Date" required>
     <input type="password" placeholder="Contraseña" class="Contraseña" required>
     <input type="submit" value="Registrarse" class="Registrado">
+    </div>
   </form>
-  <div id="message"></div>
+
+
 `;
 
 inputsRegister.appendChild(div);
 
 const registrationForm = document.getElementById('registrationForm');
-const messageDiv = document.getElementById('message');
 const registradoAlert = document.querySelector('.Registrado');
 
 registrationForm.addEventListener('submit', function(event) {
