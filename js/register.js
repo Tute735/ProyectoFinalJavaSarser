@@ -39,7 +39,7 @@ registrationForm.addEventListener('submit', function(event) {
 
   registrationForm.reset();
 
- window.open("http://192.168.1.39:5500/html/tienda.html")
+ window.open('./tienda.html')
   
 });
 
