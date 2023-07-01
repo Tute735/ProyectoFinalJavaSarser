@@ -248,24 +248,23 @@ const verCarrito = () => {
 
 finalizarCompra.addEventListener("click", () => {
   const userInfo = localStorage.getItem("userInfo")
-  Toastify({
-    classname:"alert",
-    text: "Compra Realizada",
-    duration: 1000,
-    newWindow: true,
-    close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "centar", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
-    style: {
-      background: "linear-gradient(to left, ) class= alert",
-    },
-    onClick: function(){} // Callback after click
-  }).showToast();
-
   if (userInfo == null) {
     window.open('./register.html', "_self")
   } else {
+    Toastify({
+      classname:"alert",
+      text: "Compra Realizada",
+      duration: 1000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "centar", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to left, ) class= alert",
+      },
+      onClick: function(){} // Callback after click
+    }).showToast();
     localStorage.setItem("Compra", JSON.stringify({ articulos: [...carrito], total: precioTotal }))
     carrito = []
     verCarrito()

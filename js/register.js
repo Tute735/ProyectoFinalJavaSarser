@@ -39,8 +39,8 @@ registrationForm.addEventListener('submit', function(event) {
 
   registrationForm.reset();
 
- window.open('./tienda.html')
- window.close
+  window.open('./tienda.html', "_self")
+ 
   
 });
 
