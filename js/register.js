@@ -38,9 +38,7 @@ registrationForm.addEventListener('submit', function(event) {
 
   registrationForm.reset()
 
-  messageDiv.textContent = 'Registrado con éxito, ya puedes comprar en la tienda'
-  messageDiv.classList.add('RegistradoExito')
-  
+
 
 
 
