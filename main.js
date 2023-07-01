@@ -6,16 +6,25 @@ const vaciarCarrito = document.querySelector("#vaciarCarrito")
 const finalizarCompra = document.querySelector  (".Comprar")
 const agregarCarritos = document.querySelectorAll(".agregarCarrito")
 
-let carrito = []
+let carrito = [];
 let precioTotal = 0
 
+//guardar carrito cuando se actualice la pagina
+document.addEventListener("DOMContentLoaded", () => {
+  carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  verCarrito();})
+
+
+
+//boton para abrir el carrito
 abrirCarrito.addEventListener("click", () => {
   modalCarrito.showModal()
 })
-
+//boton para cerrar el carrito
 cerrarCarrito.addEventListener("click", () => {
   modalCarrito.close()
 })
+//boton para vaciar carrito con libreria
 vaciarCarrito.addEventListener('click', ()=>{
   Toastify({
     classname:"alert",
@@ -35,13 +44,14 @@ vaciarCarrito.addEventListener('click', ()=>{
   carrito.length =[]
   verCarrito()})
 
+
   const jsonFethc = async() =>{
     const respuesta = await fetch ("../data.json")
     const sneakers = await respuesta.json()
 
     return sneakers
   }
-
+//creacion de productos
   const crearProductos = () => {
     cardsProductos.innerHTML = "";
   
@@ -80,7 +90,7 @@ vaciarCarrito.addEventListener('click', ()=>{
           }).showToast();
         });
       });
-  
+  //filtro de precios
       const filtroPrecios = document.createElement("div")
       filtroPrecios.innerHTML = `
       <div class="displayFiltros">
@@ -101,15 +111,19 @@ vaciarCarrito.addEventListener('click', ()=>{
       cardsProductos.insertAdjacentElement("beforebegin", filtroPrecios)
       const btnFiltrar = document.getElementById("btnFiltrar")
       const btnLimpiarFiltro = document.getElementById("btnLimpiarFiltro")
-  
+      //boton de filtrar
       btnFiltrar.addEventListener("click", () => {
         const precioMin = parseFloat(document.getElementById("precioMin").value)
         const precioMax = parseFloat(document.getElementById("precioMax").value)
+        
   
         const productosFiltrados = filtrarPorPrecio(sneakers, precioMin, precioMax)
         mostrarProductosFiltrados(productosFiltrados);
+      
+
       });
-  
+      
+      //boton de limpiar el filtro
       btnLimpiarFiltro.addEventListener("click", () => {
         document.getElementById("precioMin").value = ""
         document.getElementById("precioMax").value = ""
@@ -153,11 +167,14 @@ vaciarCarrito.addEventListener('click', ()=>{
         carrito.push({...productoEncontrado, cantidad: 1})
       }
       verCarrito()
+      
+
     }
 
 
 crearProductos()
 
+//Ver productos dentro del carrito
 const verCarrito = () => {
   const carritoContainer = document.querySelector("#modalContainer")
   carritoContainer.innerHTML = ""
@@ -186,7 +203,9 @@ const verCarrito = () => {
 
   const cantidades = carrito.reduce((a, b) => a + b.cantidad, 0)
   precioTotal = carrito.reduce((a, b) => a + b.precio * b.cantidad, 0)
-
+  guardarStorage()
+  
+  
   carritoHTML += `
     <div class= "precioCant">
     <div class = "cantidadTot">
@@ -204,7 +223,7 @@ const verCarrito = () => {
 
  
   const eliminarProd = document.querySelectorAll(".eliminarProd")
-
+//eliminar, agregar ud y eliminar ud
   eliminarProd.forEach(botones => {
     botones.addEventListener("click", () => {
       const prodId = botones.parentNode.parentNode.attributes.prodId.value
@@ -242,10 +261,11 @@ const verCarrito = () => {
       }
 
       verCarrito()
+
     })
   })
 }
-
+//boton para finalizar la compra
 finalizarCompra.addEventListener("click", () => {
   const userInfo = localStorage.getItem("userInfo");
   const compraId = IdUnico();
@@ -277,7 +297,11 @@ finalizarCompra.addEventListener("click", () => {
   }
 });
 
-
+//id unico para la compra 
 function IdUnico() {
   return Math.random().toString(36);
 }
+function guardarStorage() {
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
