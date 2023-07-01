@@ -39,8 +39,8 @@ registrationForm.addEventListener('submit', function(event) {
 
   registrationForm.reset();
 
-  messageDiv.textContent = 'Registrado con éxito, ya puedes comprar en la tienda';
-  messageDiv.classList.add('RegistradoExito');
+ window.open("http://192.168.1.39:5500/html/tienda.html")
+  
 });
 
 

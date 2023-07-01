@@ -266,8 +266,8 @@ finalizarCompra.addEventListener("click", () => {
   if (userInfo == null) {
     window.open("http://192.168.1.39:5500/html/register.html", "_self")
   } else {
-    localStorage.setItem("carrito", JSON.stringify({ articulos: [...carrito], total: precioTotal }))
-    carrito = []
+    localStorage.setItem("Compra", JSON.stringify({ articulos: [...carrito], total: precioTotal }))
+    carrito.length = []
     verCarrito()
  
   }
