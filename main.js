@@ -158,7 +158,42 @@ function mostrarProductosFiltrados(productos) {
     `;
     cardsProductos.appendChild(card);
   });
+  const agregarCarrito = document.querySelectorAll(".agregarCarrito");
+  agregarCarrito.forEach((boton) => {
+    boton.addEventListener("click", (e) => agregarFiltro(e, productos)); // Llamar a la función agregarFiltro
+    boton.addEventListener("click", () => {
+      Toastify({
+        classname: "alert",
+        text: "Producto agregado",
+        duration: 1000,
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to left, ) class= alert",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+    });
+  });
 }
+
+function agregarFiltro(e, productos) {
+  const id = e.target.id;
+  const productoEncontrado = productos.find(producto => producto.id === id);
+  const sumarProd = carrito.find(prod => prod.id === id);
+
+  if (sumarProd) {
+    sumarProd.cantidad++;
+  } else {
+    carrito.push({ ...productoEncontrado, cantidad: 1 });
+  }
+
+  verCarrito();
+}
+
 
 // Función para agregar un producto al carrito
 function agregarCarrito(e, productos) {

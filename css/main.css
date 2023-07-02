@@ -63,7 +63,7 @@ body {
  justify-self: center;
  box-shadow: 0 0 5px 0 rgba(22, 22, 26, 0.25);
   transition: 0.5s;
-  margin:10px
+  margin: 60px;
 }
 #cardsProductos .producto:hover{
   box-shadow: 5px 5px 20px black;
@@ -99,7 +99,7 @@ margin-left: 150px;
 }
 .producto img{
   display: flex;
-  width: 20vw;
+  width: 10vw;
   justify-content: center;
   align-self:center ;
 }
